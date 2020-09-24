@@ -1,0 +1,119 @@
+<form action="" [formGroup]="storeForm" (ngSubmit)="register()">
+   
+    <div>
+        <label for="">Name</label>
+    </div>
+    <div>
+        <input type="text" class="form-control" formControlName="name">
+    
+        <div *ngIf="submitted && f.name.errors" class="alert alert-danger" role="alert">
+            <div *ngIf="f.name.errors.required">
+                Name is required
+            </div>
+            <div *ngIf="f.name.errors.pattern">
+                Invalid name format
+            </div>
+    
+        </div>
+    
+    
+    
+    </div>
+
+
+    <div>
+        <label for="">Email</label>
+    </div>
+    <div>
+        <input type="text" class="form-control" formControlName="email">
+    
+    <div *ngIf="submitted && f.email.errors" class="alert alert-danger" role="alert">
+        <div *ngIf="f.email.errors.required">
+            Email is required
+        </div>
+        <div *ngIf="f.email.errors.pattern">
+            Enter a valid Email
+        </div>
+
+    </div>
+    
+    </div>
+
+
+    <div>
+        <label for="">Password</label>
+    </div>
+    <div>
+        <input type="text" class="form-control" formControlName="password">
+    
+        <div *ngIf="submitted && f.password.errors" class="alert alert-danger" role="alert">
+            <div *ngIf="f.password.errors.required">
+                Name is required
+            </div>
+            <div *ngIf="f.password.errors.pattern">
+                Invalid Password format
+            </div>
+    
+        </div>
+    
+    
+    
+    </div>
+
+
+
+
+    <div>
+        <label for="">Date Of Birth</label>
+    </div>
+    <div>
+        <input type="date" class="form-control" formControlName="dob">
+    
+        <div *ngIf="submitted && f.dob.errors" class="alert alert-danger" role="alert">
+            <div *ngIf="f.dob.errors.required">
+                DOB is required
+            </div>
+            <div *ngIf="f.dob.errors.pattern">
+                Invalid DOB format
+            </div>
+    
+        </div>
+    
+    
+    
+    </div>
+
+
+
+
+    <div>
+        <label for="">Mobile</label>
+    </div>
+    <div>
+        <input type="text" class="form-control" formControlName="mobile">
+    
+        <div *ngIf="submitted && f.mobile.errors" class="alert alert-danger" role="alert">
+            <div *ngIf="f.mobile.errors.required">
+                Mobile is required
+            </div>
+            <div *ngIf="f.mobile.errors.pattern">
+                Invalid Mobile Number format
+            </div>
+    
+        </div>
+    
+    
+    
+    </div>
+
+
+
+   
+    <button >save</button>
+    <button (click)="reset()">reset</button>
+
+
+Form Status{{storeForm.status}} 
+<!-- Print validation is valid or not -->
+
+</form>
