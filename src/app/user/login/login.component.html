@@ -1,6 +1,6 @@
 
 
- <form action="" class="form-control" #myform="ngForm">
+ <form (ngSubmit)="save()" class="form-control" #myform="ngForm">
     <div class="form-group">
         <label for="">Username</label>
     </div>
@@ -24,7 +24,10 @@
 
     </div>
    
-    <button class="btn btn-primary" [disabled]="myform.invalid" (click)="submit()">Save</button><br>
+    <button class="btn btn-primary" [disabled]="myform.invalid" >Save</button><br>
    
 </form>
+
+
+
 

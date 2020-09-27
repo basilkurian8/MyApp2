@@ -11,6 +11,10 @@ import {ReactiveFormsModule} from '@angular/forms'
 import {UserModule} from './user/user.module';
 import { ShowcartComponent } from './showcart/showcart.component'
 
+import {AngularFireModule} from '@angular/fire'
+import {AngularFireDatabaseModule} from '@angular/fire/database'
+import {environment} from '../environments/environment'
+
 
 
 
@@ -26,7 +30,9 @@ import { ShowcartComponent } from './showcart/showcart.component'
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    UserModule
+    UserModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule
    
     
   ],
