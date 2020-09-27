@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
     this.pass = this.model.password
 
 
-    for (let i = 0; i <= this.studentlist.length; i++) {
+    for (let i = 0; i < this.studentlist.length; i++) {
       if (this.user == this.studentlist[i].name && this.pass == this.studentlist[i].password) {
         console.log("Login Success")
       }
